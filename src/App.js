@@ -47,7 +47,7 @@ const App = () => {
 };
 
 const Container = styled.section`
-  border: 5px solid red;
+  /* border: 5px solid red; */
   height: 100vh;
   display: flex;
   justify-content: center;
@@ -55,7 +55,7 @@ const Container = styled.section`
 `;
 
 const Box = styled.article`
-  border: 3px dashed blue;
+  /* border: 3px dashed blue; */
   width: 600px;
   background: #fff;
 `;

@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import { FaTwitterSquare, FaTumblrSquare, FaFont } from "react-icons/fa";
+import { FaTwitterSquare, FaTumblrSquare } from "react-icons/fa";
 
 const QuoteBox = ({ quote, author, nextBtn, randomColor }) => {
   return (
@@ -30,20 +30,20 @@ const QuoteBox = ({ quote, author, nextBtn, randomColor }) => {
 };
 
 const Container = styled.div`
-  border: 3px solid red;
+  /* border: 3px solid red; */
   margin: 2rem;
   font-weight: 400;
 
   .quote {
-    border: 3px solid grey;
+    /* border: 3px solid grey; */
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2rem;
   }
 
   .author {
+    /* border: 1px solid blue; */
     text-align: right;
-    border: 1px solid blue;
     width: 95%;
     margin: 0 auto;
     font-size: 1rem;
@@ -51,7 +51,7 @@ const Container = styled.div`
 `;
 
 const BtnBox = styled.div`
-  border: 3px solid red;
+  /* border: 3px solid red; */
   width: 95%;
   margin: 0 auto;
   display: flex;
