@@ -76,6 +76,7 @@ const NextBtn = styled.button`
   border-radius: 5px;
   padding: 0.8rem;
   font-size: 1rem;
+  cursor: pointer;
 `;
 
 export default QuoteBox;
