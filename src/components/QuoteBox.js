@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaTwitterSquare, FaTumblrSquare } from "react-icons/fa";
+import Link from "@material-ui/core/Link";
 
 const QuoteBox = ({ quote, author, nextBtn, randomColor }) => {
   return (
@@ -13,8 +14,12 @@ const QuoteBox = ({ quote, author, nextBtn, randomColor }) => {
       </p>
       <BtnBox>
         <SocialIcons>
-          <FaTwitterSquare style={{ color: randomColor, fontSize: "3rem" }} />
-          <FaTumblrSquare style={{ color: randomColor, fontSize: "3rem" }} />
+          <Link href="twitter.com/intent/tweet">
+            <FaTwitterSquare style={{ color: randomColor, fontSize: "3rem" }} />
+          </Link>
+          <Link href="https://www.tumblr.com/">
+            <FaTumblrSquare style={{ color: randomColor, fontSize: "3rem" }} />
+          </Link>
         </SocialIcons>
         <NextQuote>
           <NextBtn
