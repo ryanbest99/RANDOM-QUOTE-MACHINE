@@ -1,8 +1,15 @@
 import React, { useEffect, useState } from "react";
+import styled from "styled-components";
+import QuoteBox from "./components/QuoteBox";
+import { colors } from "./colors";
 
 const App = () => {
-  const [packages, setPackages] = useState({});
   const randomNumber = Math.floor(Math.random() * 102);
+  const randomNumber2 = Math.floor(Math.random() * colors.length);
+  const [packages, setPackages] = useState({});
+  const [randomColor, setRandomColor] = useState(colors[randomNumber2]);
+
+  console.log(randomColor);
 
   const url =
     "https://gist.githubusercontent.com/camperbot/5a022b72e96c4c9585c32bf6a75f62d9/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json";
@@ -22,16 +29,35 @@ const App = () => {
   const nextBtn = (e) => {
     e.preventDefault();
     fetchQuotes();
+    setRandomColor(colors[randomNumber2]);
   };
 
   return (
-    <>
-      <h1>Random Quote</h1>
-      <h2>{quote}</h2>
-      <h3>- {author}</h3>
-      <button onClick={nextBtn}>Next Quote</button>
-    </>
+    <Container style={{ backgroundColor: randomColor }}>
+      <Box>
+        <QuoteBox
+          quote={quote}
+          author={author}
+          nextBtn={nextBtn}
+          randomColor={randomColor}
+        />
+      </Box>
+    </Container>
   );
 };
+
+const Container = styled.section`
+  border: 5px solid red;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const Box = styled.article`
+  border: 3px dashed blue;
+  width: 600px;
+  background: #fff;
+`;
 
 export default App;
